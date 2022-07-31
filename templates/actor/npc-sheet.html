@@ -35,7 +35,7 @@
                     <div class="box-item armor-box flex row space-between align-center armor margin-bottom  {{data.creatureType}}">
                         <label class="item-name armor-roll rollable" for="data.armorrating.value">{{localize 'MYZ.ARMOR'}}</label>
                         <span class="right-element">
-                            <div class="armor-roll" style="cursor:pointer; padding: 5px 0 0 0; text-align: center; width:22px; min-height:26px; background-image: url(systems/mutant-year-zero/ui/grey-shield.png); background-position: center; background-repeat: no-repeat;">{{data.armorrating.value}}</div>
+                            <div class="armor-roll" style="cursor:pointer; padding: 5px 0 0 0; text-align: center; width:22px; min-height:26px; background-image: url(systems/yearzero/ui/grey-shield.png); background-position: center; background-repeat: no-repeat;">{{data.armorrating.value}}</div>
                         </span>
                     </div>
 
@@ -102,22 +102,22 @@
         {{!-- Attributes Tab --}}
         <div class="tab" data-group="primary" data-tab="attributes">
             <div class="grid grid-2col">
-                <div>{{!-- Skills --}} {{> systems/mutant-year-zero/templates/actor/partials/skills.html fixedHeight='fixed-height'}}</div>
+                <div>{{!-- Skills --}} {{> systems/yearzero/templates/actor/partials/skills.html fixedHeight='fixed-height'}}</div>
                 <div>
-                    {{!-- Abilities --}} {{> systems/mutant-year-zero/templates/actor/partials/abilities.html sourceType='ability' sourceList=abilities
+                    {{!-- Abilities --}} {{> systems/yearzero/templates/actor/partials/abilities.html sourceType='ability' sourceList=abilities
                     sourceLabel='MYZ.ABILITIES' fixedHeight='fixed-height'}}
                 </div>
                 <div>
-                    {{!-- Talents --}} {{> systems/mutant-year-zero/templates/actor/partials/talents.html sourceType='talent' sourceList=talents
+                    {{!-- Talents --}} {{> systems/yearzero/templates/actor/partials/talents.html sourceType='talent' sourceList=talents
                     sourceLabel='MYZ.TALENTS' fixedHeight='fixed-height'}}
                 </div>
                 <div>
                     {{#ifCond data.creatureType '==' 'robot'}}
-                    {{> systems/mutant-year-zero/templates/actor/partials/special.html}}
+                    {{> systems/yearzero/templates/actor/partials/special.html}}
                     {{/ifCond}}
 
                     {{#ifCond data.creatureType '!==' 'robot'}}
-                    {{> systems/mutant-year-zero/templates/actor/partials/criticals.html fixedHeight='fixed-height'}}
+                    {{> systems/yearzero/templates/actor/partials/criticals.html fixedHeight='fixed-height'}}
                     {{/ifCond}}
                 </div>
             </div>
@@ -125,12 +125,12 @@
 
         {{!-- Gear Tab --}}
         <div class="tab" data-group="primary" data-tab="gear">
-            {{> systems/mutant-year-zero/templates/actor/partials/weapons.html}} 
+            {{> systems/yearzero/templates/actor/partials/weapons.html}} 
             {{#if (ifvalue data.creatureType 'robot')}} 
-            {{> systems/mutant-year-zero/templates/actor/partials/chassis-1row.html}}
+            {{> systems/yearzero/templates/actor/partials/chassis-1row.html}}
             {{/if}} 
             {{#unless (ifvalue data.creatureType 'robot')}} 
-            {{> systems/mutant-year-zero/templates/actor/partials/armors.html}}
+            {{> systems/yearzero/templates/actor/partials/armors.html}}
             {{/unless}}
         </div>
 

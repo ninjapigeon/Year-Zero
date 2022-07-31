@@ -78,7 +78,7 @@ export class DiceRoller {
             actor &&
             this.attribute &&
             ['mutant', 'animal', 'robot', 'human', 'npc'].includes(actor.type) &&
-            game.settings.get("mutant-year-zero", "applyPushTrauma")
+            game.settings.get("yearzero", "applyPushTrauma")
         ) {
 
             const updateData = {};
@@ -114,7 +114,7 @@ export class DiceRoller {
         }
 
         // Applies pushed roll effect to the gear.
-        if (actor && this.itemId && game.settings.get("mutant-year-zero", "applyPushGearDamage")) {
+        if (actor && this.itemId && game.settings.get("yearzero", "applyPushGearDamage")) {
             const item = actor.items.get(this.itemId);
             const baneCount = this.countGearFailures() - this.gearDamageCount;
             if (item && baneCount > 0) {
@@ -219,7 +219,7 @@ export class DiceRoller {
             damage: this.baseDamage,
             dices: this.dices,
         };
-        const html = await renderTemplate("systems/mutant-year-zero/templates/chat/roll.html", rollData);
+        const html = await renderTemplate("systems/yearzero/templates/chat/roll.html", rollData);
         let chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),

@@ -26,7 +26,7 @@ export default class MYZHooks {
             const existingSkills = actor.items.filter((i) => i.type === ItemType.Skill).map((i) => i.data.skillKey);
             const skillsToAdd = actorCoreSkills.filter((s) => !existingSkills.includes(s));
             // Load Core Skills Compendium skills
-            let skillIndex = await game.packs.get("mutant-year-zero.core-skills").getDocuments();
+            let skillIndex = await game.packs.get("yearzero.core-skills").getDocuments();
             // TRY TO GET THE OFFICIAL SKILL CONTENT IF IT IS PRESENT
             const errMsgOfficialSkills = 'No official skill compendium found, reverting to the free content.';
             if (actor.data.data.creatureType == 'mutant') {

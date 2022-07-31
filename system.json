@@ -1,31 +1,31 @@
 {
-  "name": "mutant-year-zero",
-  "title": "Mutant Year Zero",
-  "description": "The Mutant Year Zero system for FoundryVTT!",
+  "name": "yearzero",
+  "title": "Year Zero System (Anka)",
+  "description": "The Mutant Year Zero system for FoundryVTT! Modified from @HappySteve's awesome M:YZ system, and homebrewed for my own Anka world.",
   "version": "9.0.3",
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
   "templateVersion": 1,
-  "author": "HappySteve",
+  "author": "ninjapigeon",
   "esmodules": [
     "module/myz.js"
   ],
   "styles": [
-    "css/mutant-year-zero.css"
+    "css/yearzero.css"
   ],
   "scripts": [],
   "packs": [
     {
       "name": "core-skills",
       "label": "Core Skills",
-      "system": "mutant-year-zero",
+      "system": "yearzero",
       "path": "./packs/core-skills.db",
       "entity": "Item"
     },
     {
       "name": "myz-macros",
       "label": "MYZ Macros",
-      "system": "mutant-year-zero",
+      "system": "yearzero",
       "path": "./packs/myz-macros.db",
       "entity": "Macro"
     }
@@ -35,42 +35,12 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
-    },
-    {
-      "lang": "se",
-      "name": "Swedish",
-      "path": "lang/se.json"
-    },
-    {
-      "lang": "fr",
-      "name": "French",
-      "path": "lang/fr.json"
-    },
-    {
-      "lang": "pt-br",
-      "name": "Portugues (Brasil)",
-      "path": "lang/pt-br.json"
-    },
-    {
-      "lang": "pt-BR",
-      "name": "Português do Brasil",
-      "path": "lang/pt-br.json"
-    },
-    {
-      "lang": "de",
-      "name": "Deutsch",
-      "path": "lang/de.json"
-    },
-    {
-      "lang": "es",
-      "name": "Spanish",
-      "path": "lang/es.json"
     }
   ],
   "gridDistance": 1,
   "gridUnits": "m",
-  "url": "https://github.com/superseva/mutant-year-zero",
-  "manifest": "https://github.com/superseva/mutant-year-zero/releases/latest/download/system.json",
-  "download": "https://github.com/superseva/mutant-year-zero/releases/download/v9.0.3/mutant-year-zero.zip",
+  "url": "https://github.com/ninjapigeon/yearzero",
+  "manifest": "",
+  "download": "",
   "license": "LICENSE.txt"
 }

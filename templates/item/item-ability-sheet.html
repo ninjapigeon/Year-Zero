@@ -1,6 +1,6 @@
 <form class="{{cssClass}} {{data.itemType}}" autocomplete="off">
-    {{> systems/mutant-year-zero/templates/item/partials/header-simple.html}}
-    {{>"systems/mutant-year-zero/templates/item/partials/tabs.html"}}
+    {{> systems/yearzero/templates/item/partials/header-simple.html}}
+    {{>"systems/yearzero/templates/item/partials/tabs.html"}}
 
     <div class="sheet-body">
         <div class="tab" data-group="primary" data-tab="details">
@@ -9,6 +9,6 @@
                 <div class="description">{{editor content=data.description target="data.description" button=true owner=owner editable=true}}</div>
             </div>
         </div>
-        {{>"systems/mutant-year-zero/templates/item/partials/modifiers.html"}}
+        {{>"systems/yearzero/templates/item/partials/modifiers.html"}}
     </div>
 </form>
