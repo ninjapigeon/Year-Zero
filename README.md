@@ -1,10 +1,10 @@
-# Mutant-Year-Zero
+# Year-Zero
 
-The Open Source Year Zero system for FoundryVTT.
+The Open Source Year Zero system for FoundryVTT. Homebrewed specifically for my world Anka.
 
 ## Character Types:
 
-**MUTANTS**,\
+**MUTANTS**,\ (placeholder for generic characters)
 **NPC** -> a shorter version of a mutant/animal/robot/human \
 **ARK**
 
@@ -21,4 +21,5 @@ Both **_Talents and Secondary Functions_** are represented by an Item called **T
 
 -   You can specify the type of the talent on the Talent Item Sheet or
 -   Talents dragged to a robot sheet or created from a robot sheet will be named 'Secondary Functions'.
-## The above is all a work in progress as i migrate this to the OS System.
+
+The above is all a work in progress as i migrate this to the OpenSource System.
