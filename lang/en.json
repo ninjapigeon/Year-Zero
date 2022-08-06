@@ -1,6 +1,6 @@
 {
   "ACTOR.TypeArk": "Ark",
-  "ACTOR.TypeMutant": "Mutant",
+  "ACTOR.TypeMutant": "Character",
   "ACTOR.TypeNpc": "NPC",
   "ITEM.TypeAbility": "Ability",
   "ITEM.TypeArmor": "Armor",
@@ -95,7 +95,7 @@
   "MYZ.LETHAL": "Lethal",
   "MYZ.LOCATION": "Location",
   "MYZ.MODIFIER": "Modifier",
-  "MYZ.MUTANT": "Mutant",
+  "MYZ.MUTANT": "Character",
   "MYZ.YEARZERO": "Year Zero",
   "MYZ.MUTATIONS": "TBD",
   "MYZ.NAME": "Name",
