@@ -9,15 +9,15 @@ $font-secondary: 'Karla', sans-serif;
 /* MYZ FONT SYMBOLS*/
 @font-face {
     font-family: 'myz';
-    src: url('../fonts/myz.eot');
-    src: url('../fonts/myz.eot?#iefix') format('embedded-opentype'), url('../fonts/myz.woff') format('woff'), url('../fonts/myz.ttf') format('truetype'), url('../fonts/myz.svg#myz') format('svg');
+    src: url('../fonts/YZ.eot');
+    src: url('../fonts/YZ.eot?#iefix') format('embedded-opentype'), url('../fonts/YZ.woff') format('woff'), url('../fonts/YZ.ttf') format('truetype'), url('../fonts/YZ.svg#myz') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-[class*='myz-']:before {
+[class*='yz-']:before {
     display: inline-block;
-    font-family: 'myz';
+    font-family: 'yz';
     font-style: normal;
     font-weight: normal;
     line-height: 1;
@@ -25,14 +25,14 @@ $font-secondary: 'Karla', sans-serif;
     -moz-osx-font-smoothing: grayscale
 }
 
-.myz-radioactive:before {
+.yz-radioactive:before {
     content: '\0041';
 }
 
-.myz-biohazard:before {
+.yz-biohazard:before {
     content: '\0042';
 }
 
-.myz-explosion:before {
+.yz-explosion:before {
     content: '\0043';
 }

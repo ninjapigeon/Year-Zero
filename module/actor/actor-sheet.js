@@ -6,7 +6,7 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from '../helpers/
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class MYZActorSheet extends ActorSheet {
+export class YZActorSheet extends ActorSheet {
     diceRoller = new DiceRoller();
 
     /* -------------------------------------------- */
@@ -125,7 +125,7 @@ export class MYZActorSheet extends ActorSheet {
         /* -------------------------------------------- */
 
         html.find(".button-roll").click((ev) => {
-            let rollName = "MYZ.CUSTOM_ROLL";
+            let rollName = "YZ.CUSTOM_ROLL";
             RollDialog.prepareRollDialog({
                 rollName: rollName,
                 diceRoller: this.diceRoller,
@@ -196,7 +196,7 @@ export class MYZActorSheet extends ActorSheet {
         //Roll Rot
         html.find(".roll-rot").click((event) => {
             RollDialog.prepareRollDialog({
-                rollName: game.i18n.localize("MYZ.ROT"),
+                rollName: game.i18n.localize("YZ.ROT"),
                 diceRoller: this.diceRoller,
                 baseDefault: this.actor.data.data.rot.value,
             });
@@ -223,7 +223,7 @@ export class MYZActorSheet extends ActorSheet {
                 skill = this.actor.data.items.contents.find((i) => i.data.data.skillKey == "SHOOT");
             }
             if (!skill) {
-                //ui.notifications.warn(game.i18n.localize("MYZ.NO_COMBAT_SKILL"));
+                //ui.notifications.warn(game.i18n.localize("YZ.NO_COMBAT_SKILL"));
                 skill = {
                     data: {
                         data: {
@@ -264,7 +264,7 @@ export class MYZActorSheet extends ActorSheet {
         //Roll Armor
         html.find(".armor-roll").click((event) => {
             RollDialog.prepareRollDialog({
-                rollName: game.i18n.localize("MYZ.ARMOR"),
+                rollName: game.i18n.localize("YZ.ARMOR"),
                 diceRoller: this.diceRoller,
                 gearDefault: this.actor.data.data.armorrating.value,
             });
@@ -289,9 +289,9 @@ export class MYZActorSheet extends ActorSheet {
         /* -------------------------------------------- */
         /* ADD LEFT CLICK CONTENT MENU
         /* -------------------------------------------- */
-        const editLabel = game.i18n.localize("MYZ.EDIT");
-        const deleteLabel = game.i18n.localize("MYZ.DELETE");
-        const postLabel = game.i18n.localize("MYZ.POST");
+        const editLabel = game.i18n.localize("YZ.EDIT");
+        const deleteLabel = game.i18n.localize("YZ.DELETE");
+        const postLabel = game.i18n.localize("YZ.POST");
 
         let menu_items = [
             {
@@ -417,7 +417,7 @@ export class MYZActorSheet extends ActorSheet {
         event.preventDefault();
         const attName = $(event.currentTarget).data("attribute");
         const attVal = this.actor.data.data.attributes[attName].value;
-        let rollName = `MYZ.ATTRIBUTE_${attName.toUpperCase()}_${this.actor.data.data.creatureType.toUpperCase()}`;
+        let rollName = `YZ.ATTRIBUTE_${attName.toUpperCase()}_${this.actor.data.data.creatureType.toUpperCase()}`;
 
         const itmMap = this.actor.items.filter(itm=>itm.data.data.modifiers!=undefined)
         const itemsThatModifyAttribute = itmMap.filter(i=>i.data.data.modifiers[attName]!=0)
@@ -457,7 +457,7 @@ export class MYZActorSheet extends ActorSheet {
             if (skill.data.data.skillKey == "") {
                 skillName = skill.data.name;
             } else {
-                skillName = game.i18n.localize(`MYZ.SKILL_${skill.data.data.skillKey}`);
+                skillName = game.i18n.localize(`YZ.SKILL_${skill.data.data.skillKey}`);
             }
             
 

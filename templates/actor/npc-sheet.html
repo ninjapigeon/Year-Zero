@@ -2,12 +2,12 @@
     {{#if (ifvalue data.creatureType 'npc')}}
     <div class="overlay">
         <div class="flex column center flex-center pick-npc">
-            <h2>{{localize 'MYZ.PICK_NPC_TYPE'}}</h2>
+            <h2>{{localize 'YZ.PICK_NPC_TYPE'}}</h2>
             <div class="grid grid-2col">
-                <a class="crature-picker" data-creature="mutant">{{localize 'MYZ.MUTANT'}}</a>
-                <a class="crature-picker" data-creature="animal">{{localize 'MYZ.ANIMAL'}}</a>
-                <a class="crature-picker" data-creature="robot">{{localize 'MYZ.ROBOT'}}</a>
-                <a class="crature-picker" data-creature="human">{{localize 'MYZ.HUMAN'}}</a>
+                <a class="crature-picker" data-creature="character">{{localize 'YZ.MUTANT'}}</a>
+                <a class="crature-picker" data-creature="animal">{{localize 'YZ.ANIMAL'}}</a>
+                <a class="crature-picker" data-creature="robot">{{localize 'YZ.ROBOT'}}</a>
+                <a class="crature-picker" data-creature="human">{{localize 'YZ.HUMAN'}}</a>
             </div>
         </div>
     </div>
@@ -21,8 +21,8 @@
                     <input name="name" type="text" value="{{name}}" placeholder="Name" />
                 </h1>
                 <div class="flex row npc-rank align-center">
-                    <label for="data.rank">{{localize (toUpperCase (concat 'MYZ.RANK_FOR_' data.creatureType))}}:&nbsp;</label>
-                    <input class="input-underline" type="text" placeholder="{{localize (toUpperCase (concat 'MYZ.RANK_FOR_' data.creatureType))}}" name="data.rank" value="{{data.rank}}" />
+                    <label for="data.rank">{{localize (toUpperCase (concat 'YZ.RANK_FOR_' data.creatureType))}}:&nbsp;</label>
+                    <input class="input-underline" type="text" placeholder="{{localize (toUpperCase (concat 'YZ.RANK_FOR_' data.creatureType))}}" name="data.rank" value="{{data.rank}}" />
                 </div>
             </div>
             <div class="flexrow">
@@ -33,14 +33,14 @@
 
                 <div class="flex column margin-right">
                     <div class="box-item armor-box flex row space-between align-center armor margin-bottom  {{data.creatureType}}">
-                        <label class="item-name armor-roll rollable" for="data.armorrating.value">{{localize 'MYZ.ARMOR'}}</label>
+                        <label class="item-name armor-roll rollable" for="data.armorrating.value">{{localize 'YZ.ARMOR'}}</label>
                         <span class="right-element">
                             <div class="armor-roll" style="cursor:pointer; padding: 5px 0 0 0; text-align: center; width:22px; min-height:26px; background-image: url(systems/yearzero/ui/grey-shield.png); background-position: center; background-repeat: no-repeat;">{{data.armorrating.value}}</div>
                         </span>
                     </div>
 
                     <div class="box-item header flex row space-between align-center {{data.creatureType}}">
-                        <label class="item-name" for="data.resource_points.value">{{localize (toUpperCase (concat "MYZ.RESOURCE_" "POINTS_" data.creatureType ))}}</label>
+                        <label class="item-name" for="data.resource_points.value">{{localize (toUpperCase (concat "YZ.RESOURCE_" "POINTS_" data.creatureType ))}}</label>
                         <span class="right-element">
                             <input class="short-input" type="number" name="data.resource_points.value" value="{{data.resource_points.value}}" />
                         </span>
@@ -48,8 +48,8 @@
                 </div>
 
                 <div class="flexcol space-between" style="padding:4px">
-                    <button class="button-roll margin-bottom">{{localize 'MYZ.ROLL'}}</button>
-                    <button class="button-push">{{localize 'MYZ.PUSH'}}</button>
+                    <button class="button-roll margin-bottom">{{localize 'YZ.ROLL'}}</button>
+                    <button class="button-push">{{localize 'YZ.PUSH'}}</button>
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
     <div class="flex row" style="max-height: 65px">
         <div class="grid grid-4col align-center" style="width: 100%">
             <div class="flexcol flex-group-center">
-                <label class="roll-attribute rollable" data-attribute="strength" style="margin-bottom: 5px"><strong>{{localize (toUpperCase (concat "MYZ.ATTRIBUTE_" "STRENGTH_" data.creatureType))}}</strong></label>
+                <label class="roll-attribute rollable" data-attribute="strength" style="margin-bottom: 5px"><strong>{{localize (toUpperCase (concat "YZ.ATTRIBUTE_" "STRENGTH_" data.creatureType))}}</strong></label>
                 <span>
                     <input type="number" name="data.attributes.strength.value" value="{{data.attributes.strength.value}}" class="short-input" />
                     <label>&nbsp;/&nbsp;</label>
@@ -65,7 +65,7 @@
                 </span>
             </div>
             <div class="flexcol flex-group-center">
-                <label class="roll-attribute rollable" data-attribute="agility" style="margin-bottom: 5px"><strong>{{localize (toUpperCase (concat "MYZ.ATTRIBUTE_" "AGILITY_" data.creatureType))}}</strong></label>
+                <label class="roll-attribute rollable" data-attribute="agility" style="margin-bottom: 5px"><strong>{{localize (toUpperCase (concat "YZ.ATTRIBUTE_" "AGILITY_" data.creatureType))}}</strong></label>
                 <span>
                     <input type="number" name="data.attributes.agility.value" value="{{data.attributes.agility.value}}" class="short-input" />
                     <label>&nbsp;/&nbsp;</label>
@@ -73,7 +73,7 @@
                 </span>
             </div>
             <div class="flexcol flex-group-center">
-                <label class="roll-attribute rollable" data-attribute="wits" style="margin-bottom: 5px"><strong>{{localize (toUpperCase (concat "MYZ.ATTRIBUTE_" "WITS_" data.creatureType))}}</strong></label>
+                <label class="roll-attribute rollable" data-attribute="wits" style="margin-bottom: 5px"><strong>{{localize (toUpperCase (concat "YZ.ATTRIBUTE_" "WITS_" data.creatureType))}}</strong></label>
                 <span>
                     <input type="number" name="data.attributes.wits.value" value="{{data.attributes.wits.value}}" class="short-input" />
                     <label>&nbsp;/&nbsp;</label>
@@ -81,7 +81,7 @@
                 </span>
             </div>
             <div class="flexcol flex-group-center">
-                <label class="roll-attribute rollable" data-attribute="empathy" style="margin-bottom: 5px"><strong>{{localize (toUpperCase (concat "MYZ.ATTRIBUTE_" "EMPATHY_" data.creatureType))}}</strong></label>
+                <label class="roll-attribute rollable" data-attribute="empathy" style="margin-bottom: 5px"><strong>{{localize (toUpperCase (concat "YZ.ATTRIBUTE_" "EMPATHY_" data.creatureType))}}</strong></label>
                 <span>
                     <input type="number" name="data.attributes.empathy.value" value="{{data.attributes.empathy.value}}" class="short-input" />
                     <label>&nbsp;/&nbsp;</label>
@@ -93,9 +93,9 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="attributes">{{localize "MYZ.ATTRIBUTES"}}</a>
-        <a class="item" data-tab="gear">{{localize "MYZ.GEAR"}}</a>
-        <a class="item" data-tab="info">{{localize "MYZ.INFO"}}</a>
+        <a class="item" data-tab="attributes">{{localize "YZ.ATTRIBUTES"}}</a>
+        <a class="item" data-tab="gear">{{localize "YZ.GEAR"}}</a>
+        <a class="item" data-tab="info">{{localize "YZ.INFO"}}</a>
     </nav>
 
     <div class="sheet-body">
@@ -105,11 +105,11 @@
                 <div>{{!-- Skills --}} {{> systems/yearzero/templates/actor/partials/skills.html fixedHeight='fixed-height'}}</div>
                 <div>
                     {{!-- Abilities --}} {{> systems/yearzero/templates/actor/partials/abilities.html sourceType='ability' sourceList=abilities
-                    sourceLabel='MYZ.ABILITIES' fixedHeight='fixed-height'}}
+                    sourceLabel='YZ.ABILITIES' fixedHeight='fixed-height'}}
                 </div>
                 <div>
                     {{!-- Talents --}} {{> systems/yearzero/templates/actor/partials/talents.html sourceType='talent' sourceList=talents
-                    sourceLabel='MYZ.TALENTS' fixedHeight='fixed-height'}}
+                    sourceLabel='YZ.TALENTS' fixedHeight='fixed-height'}}
                 </div>
                 <div>
                     {{#ifCond data.creatureType '==' 'robot'}}

@@ -3,7 +3,7 @@ import { YZ } from "./config.js";
 import { registerSystemSettings } from "./settings.js";
 import YZHooks from "./YZHooks.js";
 import { YZActor } from "./actor/actor.js";
-import { YZMutantSheet } from "./actor/character-sheet.js";
+import { YZCharacterSheet } from "./actor/mutant-sheet.js";
 import { YZAnimalSheet } from "./actor/animal-sheet.js";
 import { YZRobotSheet } from "./actor/robot-sheet.js";
 import { YZHumanSheet } from "./actor/human-sheet.js";
@@ -62,7 +62,7 @@ Hooks.once("init", async function () {
     // Register sheet application classes
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("yearzero", YZMCharacterSheet, {
-        types: ["mutant"],
+        types: ["character"],
         makeDefault: true,
     });
     Actors.registerSheet("yearzero", YZNpcSheet, {

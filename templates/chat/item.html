@@ -1,4 +1,4 @@
-<div class="myz chat-item">
+<div class="yz chat-item">
     <div class="border">
         <h3>{{name}}</h3>
 
@@ -7,90 +7,90 @@
         {{/if}} {{#if isArmor}}
         <h4>{{armorPart data.armorType}}</h4>
         {{/if}} {{#if isCritical}}
-        <h4>{{localize "MYZ.CRITICAL"}}</h4>
+        <h4>{{localize "YZ.CRITICAL"}}</h4>
         {{/if}} {{#if isGear}}
-        <h4>{{localize "MYZ.GEAR"}}</h4>
+        <h4>{{localize "YZ.GEAR"}}</h4>
         {{/if}} {{#if isArtifact}}
-        <h4>{{localize "MYZ.ARTIFACT"}}</h4>
+        <h4>{{localize "YZ.ARTIFACT"}}</h4>
         {{/if}} {{#if isTalent}}
-        <h4>{{localize (toUpperCase (concat 'MYZ.TALENT_' data.creatureType))}}</h4>
+        <h4>{{localize (toUpperCase (concat 'YZ.TALENT_' data.creatureType))}}</h4>
         {{/if}} {{#if isAbility}}
-        <h4>{{localize (toUpperCase (concat 'MYZ.ABILITY_' data.creatureType))}}</h4>
+        <h4>{{localize (toUpperCase (concat 'YZ.ABILITY_' data.creatureType))}}</h4>
         {{/if}} {{#if img}}
         <img class="item-img" src="{{img}}" title="{{name}}" />
         {{/if}} {{#if isWeapon}}
-        <p><strong>{{localize "MYZ.DAMAGE"}}:</strong> {{data.damage}}</p>
-        <p><strong>{{localize "MYZ.BONUS"}}:</strong> {{data.bonus.value}} / {{data.bonus.max}}</p>
-        <p><strong>{{localize "MYZ.RANGE"}}:</strong> {{localize (toUpperCase (concat 'MYZ.' data.range))}}</p>
-        <p><strong>{{localize "MYZ.COMMENT"}}:</strong> {{data.comment}}</p>
+        <p><strong>{{localize "YZ.DAMAGE"}}:</strong> {{data.damage}}</p>
+        <p><strong>{{localize "YZ.BONUS"}}:</strong> {{data.bonus.value}} / {{data.bonus.max}}</p>
+        <p><strong>{{localize "YZ.RANGE"}}:</strong> {{localize (toUpperCase (concat 'YZ.' data.range))}}</p>
+        <p><strong>{{localize "YZ.COMMENT"}}:</strong> {{data.comment}}</p>
         <hr />
-        <h4>{{localize 'MYZ.DESCRIPTION'}}:</h4>
+        <h4>{{localize 'YZ.DESCRIPTION'}}:</h4>
         {{{data.description}}}
         <hr />
         {{/if}} {{#if isArmor}}
-        <p><strong>{{localize "MYZ.ARMOR_RATING"}}:</strong> {{data.rating.value}} / {{data.rating.max}}</p>
-        <p><strong>{{localize "MYZ.EQUIPPED"}}:</strong> {{data.equipped}}</p>
-        <p><strong>{{localize "MYZ.COMMENT"}}:</strong> {{data.comment}}</p>
+        <p><strong>{{localize "YZ.ARMOR_RATING"}}:</strong> {{data.rating.value}} / {{data.rating.max}}</p>
+        <p><strong>{{localize "YZ.EQUIPPED"}}:</strong> {{data.equipped}}</p>
+        <p><strong>{{localize "YZ.COMMENT"}}:</strong> {{data.comment}}</p>
         <hr />
-        <h4>{{localize 'MYZ.DESCRIPTION'}}:</h4>
+        <h4>{{localize 'YZ.DESCRIPTION'}}:</h4>
         {{{data.description}}}
         <hr />
         {{/if}} {{#if isChassis}}
-        <p><strong>{{localize "MYZ.LOCATION"}}:</strong> {{localize (toUpperCase (concat 'MYZ.' data.location))}}</p>
-        <p><strong>{{localize "MYZ.ATTRIBUTE_STRENGTH_ROBOT"}}:</strong> {{data.strength}}</p>
-        <p><strong>{{localize "MYZ.ATTRIBUTE_AGILITY_ROBOT"}}:</strong> {{data.agility}}</p>
-        <p><strong>{{localize "MYZ.ATTRIBUTE_WITS_ROBOT"}}:</strong> {{data.wits}}</p>
-        <p><strong>{{localize "MYZ.ATTRIBUTE_EMPATHY_ROBOT"}}:</strong> {{data.empathy}}</p>
-        <p><strong>{{localize "MYZ.ARMOR"}}:</strong> {{data.armor}}</p>
-        <p><strong>{{localize "MYZ.NUMBER_OF_MODULES"}}:</strong> {{data.modules}}</p>
-        <p><strong>{{localize "MYZ.EQUIPPED"}}:</strong> {{data.equipped}}</p>
+        <p><strong>{{localize "YZ.LOCATION"}}:</strong> {{localize (toUpperCase (concat 'YZ.' data.location))}}</p>
+        <p><strong>{{localize "YZ.ATTRIBUTE_STRENGTH_ROBOT"}}:</strong> {{data.strength}}</p>
+        <p><strong>{{localize "YZ.ATTRIBUTE_AGILITY_ROBOT"}}:</strong> {{data.agility}}</p>
+        <p><strong>{{localize "YZ.ATTRIBUTE_WITS_ROBOT"}}:</strong> {{data.wits}}</p>
+        <p><strong>{{localize "YZ.ATTRIBUTE_EMPATHY_ROBOT"}}:</strong> {{data.empathy}}</p>
+        <p><strong>{{localize "YZ.ARMOR"}}:</strong> {{data.armor}}</p>
+        <p><strong>{{localize "YZ.NUMBER_OF_MODULES"}}:</strong> {{data.modules}}</p>
+        <p><strong>{{localize "YZ.EQUIPPED"}}:</strong> {{data.equipped}}</p>
         <hr />
-        <h4>{{localize 'MYZ.DESCRIPTION'}}:</h4>
+        <h4>{{localize 'YZ.DESCRIPTION'}}:</h4>
         {{{data.description}}}
         <hr />
         {{/if}} {{#if isCritical}}
-        <p><strong>{{localize "MYZ.LETHAL"}}:</strong> {{data.lethal}}</p>
-        <p><strong>{{localize "MYZ.TIMELIMIT"}}:</strong> {{data.timeLimit}}</p>
-        <p><strong>{{localize "MYZ.HEALINGTIME"}}:</strong> {{data.healingTime}}</p>
+        <p><strong>{{localize "YZ.LETHAL"}}:</strong> {{data.lethal}}</p>
+        <p><strong>{{localize "YZ.TIMELIMIT"}}:</strong> {{data.timeLimit}}</p>
+        <p><strong>{{localize "YZ.HEALINGTIME"}}:</strong> {{data.healingTime}}</p>
         {{#if data.effect}}
-        <p><strong>{{localize "MYZ.EFFECT"}}:</strong> {{data.effect}}</p>
+        <p><strong>{{localize "YZ.EFFECT"}}:</strong> {{data.effect}}</p>
         {{/if}} {{/if}} {{#if isGear}}
-        <p><strong>{{localize "MYZ.COMMENT"}}:</strong> {{data.comment}}</p>
+        <p><strong>{{localize "YZ.COMMENT"}}:</strong> {{data.comment}}</p>
         <hr />
-        <h4>{{localize 'MYZ.DESCRIPTION'}}:</h4>
+        <h4>{{localize 'YZ.DESCRIPTION'}}:</h4>
         {{{data.description}}}
         <hr />
         {{/if}} {{#if isArtifact}}
-        <p><strong>{{localize "MYZ.DEV_BONUS"}}:</strong> {{data.dev_bonus}}</p>
-        <p><strong>{{localize "MYZ.DEV_REQUIREMENT"}}:</strong> {{data.dev_requirement}}</p>
-        <p><strong>{{localize "MYZ.EFFECT"}}:</strong> {{data.effect}}</p>
+        <p><strong>{{localize "YZ.DEV_BONUS"}}:</strong> {{data.dev_bonus}}</p>
+        <p><strong>{{localize "YZ.DEV_REQUIREMENT"}}:</strong> {{data.dev_requirement}}</p>
+        <p><strong>{{localize "YZ.EFFECT"}}:</strong> {{data.effect}}</p>
         <hr />
-        <h4>{{localize 'MYZ.DESCRIPTION'}}:</h4>
+        <h4>{{localize 'YZ.DESCRIPTION'}}:</h4>
         {{{data.description}}}
         <hr />
         {{/if}}
         {{#if isSkill}}
-        <p><strong>{{localize "MYZ.ATTRIBUTE"}}:</strong> {{localize (toUpperCase (concat 'MYZ.ATTRIBUTE_' data.attribute '_' data.creatureType))}}</p>
-        <p><strong>{{localize "MYZ.VALUE"}}:</strong> {{data.value}}</p>
+        <p><strong>{{localize "YZ.ATTRIBUTE"}}:</strong> {{localize (toUpperCase (concat 'YZ.ATTRIBUTE_' data.attribute '_' data.creatureType))}}</p>
+        <p><strong>{{localize "YZ.VALUE"}}:</strong> {{data.value}}</p>
         {{{data.description}}} {{/if}}
         {{#if isTalent}}
-        <p><strong>{{localize "MYZ.TALENT_TYPE"}}:</strong> {{localize (toUpperCase (concat 'MYZ.' data.roleType))}}</p>
+        <p><strong>{{localize "YZ.TALENT_TYPE"}}:</strong> {{localize (toUpperCase (concat 'YZ.' data.roleType))}}</p>
         {{{data.description}}} {{/if}}
         {{#if isAbility}} {{#if (ifvalue 'robot' data.creatureType)}}
-        <p><strong>{{localize "MYZ.BROKEN"}}:</strong> {{data.broken}}</p>
+        <p><strong>{{localize "YZ.BROKEN"}}:</strong> {{data.broken}}</p>
         {{/if}} {{{data.description}}} {{/if}} {{#if isProject}}
-        <p><strong>{{localize "MYZ.COMPLETED"}}:</strong> {{data.completed}}</p>
-        <p><strong>{{localize "MYZ.SKILLS"}}:</strong> {{data.skills}}</p>
-        <p><strong>{{localize "MYZ.WORK_POINTS"}}:</strong> {{data.work_points}}</p>
-        <p><strong>{{localize "MYZ.DEV_BONUS"}}:</strong> {{data.DEV_Bonus}}</p>
-        <p><strong>{{localize "MYZ.DEV_REQUIREMENT"}}:</strong> {{data.DEV_Requirement}}</p>
-        <p><strong>{{localize "MYZ.SPECIAL"}}:</strong> {{data.special}}</p>
+        <p><strong>{{localize "YZ.COMPLETED"}}:</strong> {{data.completed}}</p>
+        <p><strong>{{localize "YZ.SKILLS"}}:</strong> {{data.skills}}</p>
+        <p><strong>{{localize "YZ.WORK_POINTS"}}:</strong> {{data.work_points}}</p>
+        <p><strong>{{localize "YZ.DEV_BONUS"}}:</strong> {{data.DEV_Bonus}}</p>
+        <p><strong>{{localize "YZ.DEV_REQUIREMENT"}}:</strong> {{data.DEV_Requirement}}</p>
+        <p><strong>{{localize "YZ.SPECIAL"}}:</strong> {{data.special}}</p>
         <hr />
-        <h4>{{localize 'MYZ.DESCRIPTION'}}:</h4>
+        <h4>{{localize 'YZ.DESCRIPTION'}}:</h4>
         {{{data.description}}} {{/if}} {{#if data.weight}}
-        <p><strong>{{localize "MYZ.WEIGHT"}}:</strong> {{data.weight}}</p>
+        <p><strong>{{localize "YZ.WEIGHT"}}:</strong> {{data.weight}}</p>
         {{/if}} {{#if data.cost}}
-        <p><strong>{{localize "MYZ.COST"}}:</strong> {{data.cost}}</p>
+        <p><strong>{{localize "YZ.COST"}}:</strong> {{data.cost}}</p>
         {{/if}}
     </div>
 </div>

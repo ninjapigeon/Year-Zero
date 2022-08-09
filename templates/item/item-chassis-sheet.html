@@ -9,45 +9,45 @@
             {{!-- Attributes Tab --}}
             <div class="grid grid-4col item-attr-row">
                 <div class="flex column flex-group-center">
-                    <label class="resource-label" for="data.strength">{{localize 'MYZ.ATTRIBUTE_STRENGTH_ROBOT'}}</label>
+                    <label class="resource-label" for="data.strength">{{localize 'YZ.ATTRIBUTE_STRENGTH_ROBOT'}}</label>
                     <input type="number" class="short-input" name="data.strength" value="{{data.strength}}" data-type="Number" />
                 </div>
                 <div class="flex column flex-group-center">
-                    <label class="resource-label" for="data.agility">{{localize 'MYZ.ATTRIBUTE_AGILITY_ROBOT'}}</label>
+                    <label class="resource-label" for="data.agility">{{localize 'YZ.ATTRIBUTE_AGILITY_ROBOT'}}</label>
                     <input type="number" class="short-input" name="data.agility" value="{{data.agility}}" data-type="Number" />
                 </div>
                 <div class="flex column flex-group-center">
-                    <label class="resource-label" for="data.wits">{{localize 'MYZ.ATTRIBUTE_WITS_ROBOT'}}</label>
+                    <label class="resource-label" for="data.wits">{{localize 'YZ.ATTRIBUTE_WITS_ROBOT'}}</label>
                     <input type="number" class="short-input" name="data.wits" value="{{data.wits}}" data-type="Number" />
                 </div>
                 <div class="flex column flex-group-center">
-                    <label class="resource-label" for="data.empathy">{{localize 'MYZ.ATTRIBUTE_EMPATHY_ROBOT'}}</label>
+                    <label class="resource-label" for="data.empathy">{{localize 'YZ.ATTRIBUTE_EMPATHY_ROBOT'}}</label>
                     <input type="number" class="short-input" name="data.empathy" value="{{data.empathy}}" data-type="Number" />
                 </div>
             </div>
 
             <div class="grid grid-4col item-attr-row">
                 <div class="flex column">
-                    <label class="resource-label" for="data.location">{{localize 'MYZ.LOCATION'}}</label>
+                    <label class="resource-label" for="data.location">{{localize 'YZ.LOCATION'}}</label>
                     <select name="data.location">
                         {{#select data.location }}
-                        <option value="head">{{localize 'MYZ.HEAD'}}</option>
-                        <option value="torso">{{localize 'MYZ.TORSO'}}</option>
-                        <option value="undercarriage">{{localize 'MYZ.UNDERCARRIAGE'}}</option>
+                        <option value="head">{{localize 'YZ.HEAD'}}</option>
+                        <option value="torso">{{localize 'YZ.TORSO'}}</option>
+                        <option value="undercarriage">{{localize 'YZ.UNDERCARRIAGE'}}</option>
                         {{/select}}
                     </select>
                 </div>
                 <div>
-                    <label class="resource-label" for="data.armor">{{localize 'MYZ.ARMOR'}}</label>
+                    <label class="resource-label" for="data.armor">{{localize 'YZ.ARMOR'}}</label>
                     <input type="text" name="data.armor" value="{{data.armor}}" data-type="Number" />
                 </div>
                 <div>
-                    <label class="resource-label" for="data.modules">{{localize 'MYZ.NUMBER_OF_MODULES'}}</label>
+                    <label class="resource-label" for="data.modules">{{localize 'YZ.NUMBER_OF_MODULES'}}</label>
                     <input type="text" name="data.modules" value="{{data.modules}}" data-type="Number" />
                 </div>
                 <div class="resource flex column align-center">
                     <label for="data.equipped" class="checkbox-label resource-label">
-                        {{localize 'MYZ.EQUIPPED'}}
+                        {{localize 'YZ.EQUIPPED'}}
                         <input class="input-checkbox" type="checkbox" name="data.equipped" {{checked data.equipped}} data-dtype="Boolean" />
                     </label>
                 </div>

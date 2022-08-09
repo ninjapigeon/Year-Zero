@@ -1,17 +1,17 @@
 <div class="grid">
-    <label for="data.type">{{localize "MYZ.TYPE"}}</label>
+    <label for="data.type">{{localize "YZ.TYPE"}}</label>
     <select name="data.type">
         {{#select data.type}}
-        <option value="general">{{localize "MYZ.GENERAL"}}</option>
-        <option value="role">{{localize "MYZ.ROLE"}}</option>
+        <option value="general">{{localize "YZ.GENERAL"}}</option>
+        <option value="role">{{localize "YZ.ROLE"}}</option>
         {{/select}}
     </select>
 
-    <label for="data.effect">{{localize "MYZ.EFFECT"}}</label>
+    <label for="data.effect">{{localize "YZ.EFFECT"}}</label>
     <input name="data.effect" value="{{data.effect}}">
 
 </div>
-<h2>{{localize "MYZ.DESCRIPTION"}}</h2>
+<h2>{{localize "YZ.DESCRIPTION"}}</h2>
 <section class="sheet-body">
     <div class="tab">
         {{editor content=data.description target="data.description" button=true owner=owner editable=true}}

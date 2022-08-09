@@ -4,7 +4,7 @@ The Open Source Year Zero system for FoundryVTT. Homebrewed specifically for my 
 
 ## Character Types:
 
-**MUTANTS**,\ (placeholder for generic characters)
+**Character**, default character type (includes race and role options)
 **NPC** -> a shorter version of a mutant/animal/robot/human \
 **ARK**
 

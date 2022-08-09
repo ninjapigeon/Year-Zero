@@ -6,35 +6,35 @@
                 <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="Name" /></h1>
             </div>
             <div class="flex row">
-                <input class="nolabel" name="data.role" type="text" value="{{data.role}}" placeholder="{{localize (toUpperCase (concat 'MYZ.ROLE_FOR_' data.creatureType))}}" />
+                <input class="nolabel" name="data.role" type="text" value="{{data.role}}" placeholder="{{localize (toUpperCase (concat 'YZ.ROLE_FOR_' data.creatureType))}}" />
             </div>
             <div class="flex row space-between">
-                <label style="align-self: center" for="data.xp.value">{{localize "MYZ.XP"}}:</label>
+                <label style="align-self: center" for="data.xp.value">{{localize "YZ.XP"}}:</label>
                 <input class="nolabel short-input" type="text" data-type="Number" name="data.xp.value" value="{{data.xp.value}}" />
             </div>
         </div>
         <div class="row2 align-center">
             <div>
-                <input class="nolabel" name="data.rank" type="text" value="{{data.rank}}" placeholder="{{localize (toUpperCase (concat 'MYZ.RANK_FOR_'
+                <input class="nolabel" name="data.rank" type="text" value="{{data.rank}}" placeholder="{{localize (toUpperCase (concat 'YZ.RANK_FOR_'
                 data.creatureType))}}" />
             </div>
             <div>
-                <input class="nolabel" name="data.specificType" type="text" value="{{data.specificType}}" placeholder="{{localize (toUpperCase (concat 'MYZ.SPECIFIC_TYPE_FOR_' data.creatureType))}}" />
+                <input class="nolabel" name="data.specificType" type="text" value="{{data.specificType}}" placeholder="{{localize (toUpperCase (concat 'YZ.SPECIFIC_TYPE_FOR_' data.creatureType))}}" />
             </div>
             <div class="flex row space-between">
-                <label style="align-self: center" for="data.age">{{localize "MYZ.AGE"}}:</label>
+                <label style="align-self: center" for="data.age">{{localize "YZ.AGE"}}:</label>
                 <input class="nolabel short-input" name="data.age" type="text" data-type="Number" value="{{data.age}}" />
             </div>
         </div>
         <div class="row3 align-center">
             {{> systems/yearzero/templates/actor/partials/rot.html}}
             <div class="box-item armor-box flex armor space-between align-center {{data.creatureType}}">
-                <label class="item-name armor-roll rollable" for="data.armorrating.value">{{localize 'MYZ.ARMOR'}}</label>
+                <label class="item-name armor-roll rollable" for="data.armorrating.value">{{localize 'YZ.ARMOR'}}</label>
                 <div class="right-element armor-roll" style="cursor:pointer; padding: 5px 0 0 0; text-align: center; width:100%; min-height:26px; background-image: url(systems/yearzero/ui/grey-shield.png); background-position: center; background-repeat: no-repeat;">{{data.armorrating.value}}</div>
             </div>
             <div class="flex row">
-                <button class="button-roll">{{localize 'MYZ.ROLL'}}</button>
-                <button class="button-push">{{localize 'MYZ.PUSH'}}</button>
+                <button class="button-roll">{{localize 'YZ.ROLL'}}</button>
+                <button class="button-push">{{localize 'YZ.PUSH'}}</button>
             </div>
         </div>
     </div>

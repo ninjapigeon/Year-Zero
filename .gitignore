@@ -1,7 +1,7 @@
 # IDE
 .idea/
 .vs/
-
+.code-workspace
 # Node Modules
 node_modules/
 npm-debug.log

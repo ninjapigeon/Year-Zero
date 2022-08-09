@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;800&family=Cairo:wght@400;600;700&display=swap");
 /*$font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Roboto', sans-serif;*/
-/* MYZ FONT SYMBOLS*/
+/* YZ FONT SYMBOLS*/
 @font-face {
-  font-family: 'myz';
-  src: url("../fonts/myz.eot");
-  src: url("../fonts/myz.eot?#iefix") format("embedded-opentype"), url("../fonts/myz.woff") format("woff"), url("../fonts/myz.ttf") format("truetype"), url("../fonts/myz.svg#myz") format("svg");
+  font-family: 'yz';
+  src: url("../fonts/yz.eot");
+  src: url("../fonts/yz.eot?#iefix") format("embedded-opentype"), url("../fonts/yz.woff") format("woff"), url("../fonts/yz.ttf") format("truetype"), url("../fonts/YZ.svg#myz") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-[class*='myz-']:before {
+[class*='yz-']:before {
   display: inline-block;
-  font-family: 'myz';
+  font-family: 'yz';
   font-style: normal;
   font-weight: normal;
   line-height: 1;
@@ -20,15 +20,15 @@ $font-secondary: 'Roboto', sans-serif;*/
   -moz-osx-font-smoothing: grayscale;
 }
 
-.myz-radioactive:before {
+.yz-radioactive:before {
   content: '\0041';
 }
 
-.myz-biohazard:before {
+.yz-biohazard:before {
   content: '\0042';
 }
 
-.myz-explosion:before {
+.yz-explosion:before {
   content: '\0043';
 }
 
@@ -45,7 +45,7 @@ $font-secondary: 'Roboto', sans-serif;*/
 }
 
 .window-app .window-content {
-  background-image: url(../ui/mutant-sheet-bg.jpg);
+  background-image: url("../ui/mutant-sheet-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -178,25 +178,25 @@ $font-secondary: 'Roboto', sans-serif;*/
   filter: none;
 }
 
-.myz.chat-item {
+.YZ.chat-item {
   background-color: white;
   background-image: url("../ui/mutant-sheet-bg.jpg");
   margin: 0 -5px 0 -5px;
 }
 
-.myz.chat-item .border {
+.YZ.chat-item .border {
   padding: 10px;
 }
 
-.myz.chat-item strong {
+.YZ.chat-item strong {
   text-transform: uppercase;
 }
 
-.myz.chat-item h2 {
+.YZ.chat-item h2 {
   font-family: "Karla", sans-serif;
 }
 
-.myz.chat-item h3 {
+.YZ.chat-item h3 {
   font-family: "Karla", sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -204,7 +204,7 @@ $font-secondary: 'Roboto', sans-serif;*/
   text-align: center;
 }
 
-.myz.chat-item h4 {
+.YZ.chat-item h4 {
   font-family: "Karla", sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -212,25 +212,25 @@ $font-secondary: 'Roboto', sans-serif;*/
   text-align: center;
 }
 
-.myz.chat-item .dices-result {
+.YZ.chat-item .dices-result {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-between;
 }
 
-.myz.chat-item .dices-result img {
+.YZ.chat-item .dices-result img {
   border: 0;
   width: 30px;
   height: 30px;
   margin: 0 2px 2px 0;
 }
 
-.myz.chat-item i {
+.YZ.chat-item i {
   margin-left: 2px;
 }
 
-.myz.chat-item .item-img {
+.YZ.chat-item .item-img {
   background: radial-gradient(closest-side, var(--color-highlight) 0%, transparent 100%);
   border: 0;
   display: block;
@@ -239,7 +239,7 @@ $font-secondary: 'Roboto', sans-serif;*/
   width: auto;
 }
 
-.myz.chat-item p {
+.YZ.chat-item p {
   font-family: "Karla", sans-serif;
   margin: 0 0 4px;
 }
@@ -497,7 +497,7 @@ $font-secondary: 'Roboto', sans-serif;*/
 
 .yearzero .pick-npc {
   height: 100%;
-  background-image: url(../ui/mutant-sheet-bg.jpg);
+  background-image: url("../ui/mutant-sheet-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -606,7 +606,7 @@ $font-secondary: 'Roboto', sans-serif;*/
 }
 
 .yearzero .know-nature {
-  background-image: url(../ui/know-nature-circle.webp);
+  background-image: url("../ui/know-nature-circle.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
