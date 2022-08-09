@@ -2,7 +2,7 @@
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class MYZActor extends Actor {
+export class YZActor extends Actor {
     /**
      * Augment the basic actor data with additional dynamic data.
      */
@@ -78,10 +78,10 @@ export class MYZActor extends Actor {
         _totalWeight += Number(itemsWeight);
         //add grub, water, booze and bullets
         try {
-            _totalWeight += parseInt(data.resources.grub.value) / 4;
+            _totalWeight += parseInt(data.resources.food.value) / 4;
             _totalWeight += parseInt(data.resources.water.value) / 4;
             _totalWeight += parseInt(data.resources.booze.value);
-            _totalWeight += parseInt(data.resources.bullets.value) / 20;
+            _totalWeight += parseInt(data.resources.ammo.value) / 20;
         } catch (error) {
             console.error(error);
         }

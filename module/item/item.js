@@ -2,7 +2,7 @@
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
  */
-export class MYZItem extends Item {
+export class YZItem extends Item {
 
     async _preCreate(createData, options, userId) {
         await super._preCreate(createData, options, userId);
@@ -26,8 +26,8 @@ export class MYZItem extends Item {
         //const actorData = this.actor ? this.actor.data : {};
         const data = itemData.data;
         data.itemType = itemData.type;
-        data.default_attributes = CONFIG.MYZ.attributes;
-        data.skillKeysList = CONFIG.MYZ.SKILLKEYS;
+        data.default_attributes = CONFIG.YZ.attributes;
+        data.skillKeysList = CONFIG.YZ.SKILLKEYS;
     }
 
 

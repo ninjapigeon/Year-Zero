@@ -1,4 +1,4 @@
-export class MYZDieBase extends Die {
+export class YZDieBase extends Die {
     constructor(termData) {
         termData.faces = 6;
         super(termData);
@@ -24,7 +24,7 @@ export class MYZDieBase extends Die {
     }
 }
 
-export class MYZDieSkill extends Die {
+export class YZDieSkill extends Die {
     constructor(termData) {
         termData.faces = 6;
         super(termData);
@@ -49,7 +49,7 @@ export class MYZDieSkill extends Die {
     }
 }
 
-export class MYZDieGear extends Die {
+export class YZDieGear extends Die {
     constructor(termData) {
         termData.faces = 6;
         super(termData);

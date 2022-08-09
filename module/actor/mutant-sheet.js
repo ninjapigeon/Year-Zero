@@ -1,6 +1,6 @@
 import { MYZActorSheet } from "./actor-sheet.js";
 
-export class MYZMutantSheet extends MYZActorSheet {
+export class MYZMutantSheet extends YZActorSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {

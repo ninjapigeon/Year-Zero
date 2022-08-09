@@ -1,14 +1,23 @@
 {
-  "name": "yearzero",
+  "id": "yearzero",
   "title": "Year Zero System (Anka)",
-  "description": "The Mutant Year Zero system for FoundryVTT! Modified from @HappySteve's awesome M:YZ system, and homebrewed for my own Anka world.",
-  "version": "1.0.3",
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9",
-  "templateVersion": 1,
-  "author": "ninjapigeon",
-  "esmodules": [
-    "module/myz.js"
+  "description": "The open source Year Zero system for FoundryVTT, modified from @HappySteve's awesome M:YZ system, and homebrewed for my own Anka world.",
+  "version": "1.0.4",
+  "compatibility": {
+    "minimum": "9",
+    "verified": "9",
+    "maximum": "9"
+  }, 
+  "authors": [
+    {
+      "name": "ninjapigeon",
+      "url": "https://foundryvtt.com/article/system-development/",
+	  "email": "ninjapigeon@duck.com",
+	  "discord": "ninjapigeon (UTC-7)#4068"
+    }
+  ],
+    "esmodules": [
+    "module/yz.js"
   ],
   "styles": [
     "css/yearzero.css"
@@ -23,10 +32,10 @@
       "entity": "Item"
     },
     {
-      "name": "myz-macros",
-      "label": "MYZ Macros",
+      "name": "yz-macros",
+      "label": "YZ Macros",
       "system": "yearzero",
-      "path": "./packs/myz-macros.db",
+      "path": "./packs/yz-macros.db",
       "entity": "Macro"
     }
   ],
@@ -37,10 +46,12 @@
       "path": "lang/en.json"
     }
   ],
+  "initiative": "1d10",
   "gridDistance": 1,
   "gridUnits": "m",
-  "url": "https://github.com/ninjapigeon/yearzero",
-  "manifest": "https://github.com/ninjapigeon/yearzero/system.json",
-  "download": "",
-  "license": "LICENSE.txt"
+  "primaryTokenAttribute": "resources.health",
+  "secondaryTokenAttribute": "",
+  "url": "https:github.com/ninjapigeon/yearzero/",
+  "manifest": "",
+  "download": ""
 }

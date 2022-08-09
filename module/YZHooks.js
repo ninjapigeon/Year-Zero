@@ -1,4 +1,4 @@
-export default class MYZHooks {
+export default class YZHooks {
 
     static async onCreateActor(actor, options, userId) {
         // Set creatureType and use it for building NPCS and PCs
@@ -29,30 +29,9 @@ export default class MYZHooks {
             let skillIndex = await game.packs.get("yearzero.core-skills").getDocuments();
             // TRY TO GET THE OFFICIAL SKILL CONTENT IF IT IS PRESENT
             const errMsgOfficialSkills = 'No official skill compendium found, reverting to the free content.';
-            if (actor.data.data.creatureType == 'mutant') {
+            if (actor.data.data.creatureType == 'character') {
                 try {
-                    skillIndex = await game.packs.get("myz-core-book.myzcb-items").getDocuments();
-                } catch (e) {
-                    console.log(errMsgOfficialSkills);
-                }
-            }
-            if (actor.data.data.creatureType == 'animal') {
-                try {
-                    skillIndex = await game.packs.get("myz-genlab-alpha.myz-genlab-skills").getDocuments();
-                } catch (e) {
-                    console.log(errMsgOfficialSkills);
-                }
-            }
-            if (actor.data.data.creatureType == 'robot') {
-                try {
-                    skillIndex = await game.packs.get("myz-mechatron.myzme-items").getDocuments();
-                } catch (e) {
-                    console.log(errMsgOfficialSkills);
-                }
-            }
-            if (actor.data.data.creatureType == 'human') {
-                try {
-                    skillIndex = await game.packs.get("myz-elisium.myzel-items").getDocuments();
+                    skillIndex = await game.packs.get("YZ-core-book.YZcb-items").getDocuments();
                 } catch (e) {
                     console.log(errMsgOfficialSkills);
                 }
@@ -91,18 +70,6 @@ export default class MYZHooks {
         if (!item.parent) return;
         if (item.type == "project" && item.actor.data.type != "ark") {
             ui.notifications.warn(`You can add Project only to Ark`);
-            return false;
-        }
-        if (item.type == "chassis" && item.actor.data.data.creatureType != "robot") {
-            ui.notifications.warn(`You can't add Chassis to a non-robot character`);
-            return false;
-        }
-        if (item.type == "armor" && item.actor.data.data.creatureType == "robot") {
-            ui.notifications.warn(`You can't add Armor to a robot character`);
-            return false;
-        }
-        if (item.type == "critical" && item.actor.data.data.creatureType == "robot") {
-            ui.notifications.warn(`You can't assign Criticals to a robot character`);
             return false;
         }
 

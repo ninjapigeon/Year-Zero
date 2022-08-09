@@ -77,7 +77,7 @@ export class DiceRoller {
         if (
             actor &&
             this.attribute &&
-            ['mutant', 'animal', 'robot', 'human', 'npc'].includes(actor.type) &&
+            ['character', 'npc'].includes(actor.type) &&
             game.settings.get("yearzero", "applyPushTrauma")
         ) {
 
@@ -96,7 +96,7 @@ export class DiceRoller {
                     }
                 }
                 // Adds Resources Points only to Mutants and Animals
-                if (['mutant', 'animal'].includes(actor.type) || ['mutant', 'animal'].includes(actor.data.data.creatureType)) {
+                if (['character', 'animal'].includes(actor.type) || ['character', 'animal'].includes(actor.data.data.creatureType)) {
                     const resPts = actorData['resource_points'] ?? { value: 0, max: 10 };
                     if (resPts) {
                         const { value, max } = resPts;
@@ -139,7 +139,7 @@ export class DiceRoller {
         _roll.dice.forEach((d) => {
             d.results.forEach((r) => {
                 let successAndWeight = this.getSuccessAndWeight(r.result, this.mapDiceType(d.constructor.name));
-                if (r.result == 6 || (r.result == 1 && d.constructor.name != "MYZDieSkill")) {
+                if (r.result == 6 || (r.result == 1 && d.constructor.name != "YZDieSkill")) {
                     this.diceWithResult.push({
                         diceType: this.mapDiceType(d.constructor.name),
                         value: r.result,
@@ -160,13 +160,13 @@ export class DiceRoller {
     mapDiceType(dT) {
         let dType = "";
         switch (dT) {
-            case "MYZDieBase":
+            case "YZDieBase":
                 dType = "base";
                 break;
-            case "MYZDieSkill":
+            case "YZDieSkill":
                 dType = "skill";
                 break;
-            case "MYZDieGear":
+            case "YZDieGear":
                 dType = "gear";
                 break;
             default:

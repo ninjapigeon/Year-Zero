@@ -1,19 +1,19 @@
 // Import Modules
-import { MYZ } from "./config.js";
+import { YZ } from "./config.js";
 import { registerSystemSettings } from "./settings.js";
-import MYZHooks from "./MYZHooks.js";
-import { MYZActor } from "./actor/actor.js";
-import { MYZMutantSheet } from "./actor/mutant-sheet.js";
-import { MYZAnimalSheet } from "./actor/animal-sheet.js";
-import { MYZRobotSheet } from "./actor/robot-sheet.js";
-import { MYZHumanSheet } from "./actor/human-sheet.js";
-import { MYZNpcSheet } from "./actor/npc-sheet.js";
-import { MYZArkSheet } from "./actor/ark-sheet.js";
-import { MYZItem } from "./item/item.js";
-import { MYZItemSheet } from "./item/item-sheet.js";
-import { MYZDieBase } from "./MYZDice.js";
-import { MYZDieSkill } from "./MYZDice.js";
-import { MYZDieGear } from "./MYZDice.js";
+import YZHooks from "./YZHooks.js";
+import { YZActor } from "./actor/actor.js";
+import { YZMutantSheet } from "./actor/character-sheet.js";
+import { YZAnimalSheet } from "./actor/animal-sheet.js";
+import { YZRobotSheet } from "./actor/robot-sheet.js";
+import { YZHumanSheet } from "./actor/human-sheet.js";
+import { YZNpcSheet } from "./actor/npc-sheet.js";
+import { YZArkSheet } from "./actor/ark-sheet.js";
+import { YZItem } from "./item/item.js";
+import { YZItemSheet } from "./item/item-sheet.js";
+import { YZDieBase } from "./YZDice.js";
+import { YZDieSkill } from "./YZDice.js";
+import { YZDieGear } from "./YZDice.js";
 
 import { DiceRoller } from "./component/dice-roller.js";
 import { RollDialog } from "./app/roll-dialog.js";
@@ -21,19 +21,16 @@ import { RollDialog } from "./app/roll-dialog.js";
 //import * as migrations from "./migration.js";
 
 /* ------------------------------------ */
-/* Setup MYZ system	 */
+/* Setup YZ system	 */
 /* ------------------------------------ */
 
 Hooks.once("init", async function () {
-    game.myz = {
-        MYZ,
-        MYZActor,
-        MYZMutantSheet,
-        MYZAnimalSheet,
-        MYZRobotSheet,
-        MYZHumanSheet,
-        MYZNpcSheet,
-        MYZArkSheet,
+    game.YZ = {
+        YZ,
+        YZActor,
+        YZCharacterSheet,
+        YZNpcSheet,
+        YZArkSheet,
         rollItemMacro,
         DiceRoller,
         RollDialog,
@@ -48,48 +45,36 @@ Hooks.once("init", async function () {
     };
 
     // Define custom Entity classes
-    CONFIG.MYZ = MYZ;
-    CONFIG.Actor.documentClass = MYZActor;
-    CONFIG.Item.documentClass = MYZItem;
+    CONFIG.YZ = YZ;
+    CONFIG.Actor.documentClass = YZActor;
+    CONFIG.Item.documentClass = YZItem;
     //CONFIG.diceRoller = DiceRoller;
 
     CONFIG.roller = new DiceRoller();
 
-    CONFIG.Dice.terms["b"] = MYZDieBase;
-    CONFIG.Dice.terms["s"] = MYZDieSkill;
-    CONFIG.Dice.terms["g"] = MYZDieGear;
+    CONFIG.Dice.terms["b"] = YZDieBase;
+    CONFIG.Dice.terms["s"] = YZDieSkill;
+    CONFIG.Dice.terms["g"] = YZDieGear;
 
     // Register System Settings
     registerSystemSettings();
 
     // Register sheet application classes
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("yearzero", MYZMutantSheet, {
+    Actors.registerSheet("yearzero", YZMCharacterSheet, {
         types: ["mutant"],
         makeDefault: true,
     });
-    Actors.registerSheet("yearzero", MYZAnimalSheet, {
-        types: ["animal"],
-        makeDefault: true,
-    });
-    Actors.registerSheet("yearzero", MYZRobotSheet, {
-        types: ["robot"],
-        makeDefault: true,
-    });
-    Actors.registerSheet("yearzero", MYZHumanSheet, {
-        types: ["human"],
-        makeDefault: true,
-    });
-    Actors.registerSheet("yearzero", MYZNpcSheet, {
+    Actors.registerSheet("yearzero", YZNpcSheet, {
         types: ["npc"],
         makeDefault: true,
     });
-    Actors.registerSheet("yearzero", MYZArkSheet, {
+    Actors.registerSheet("yearzero", YZArkSheet, {
         types: ["ark"],
         makeDefault: true,
     });
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("yearzero", MYZItemSheet, { makeDefault: true });
+    Items.registerSheet("yearzero", YZItemSheet, { makeDefault: true });
 
     /* -------------------------------------------- */
     /*  HANDLEBARS HELPERS      */
@@ -111,9 +96,9 @@ Hooks.once("init", async function () {
         category = normalize(category, "melee");
         switch (category) {
             case "melee":
-                return game.i18n.localize("MYZ.WEAPON_MELEE");
+                return game.i18n.localize("YZ.WEAPON_MELEE");
             case "ranged":
-                return game.i18n.localize("MYZ.WEAPON_RANGED");
+                return game.i18n.localize("YZ.WEAPON_RANGED");
         }
     });
     
@@ -121,9 +106,9 @@ Hooks.once("init", async function () {
         part = normalize(part, "armor");
         switch (part) {
             case "armor":
-                return game.i18n.localize("MYZ.ARMOR_BODY");
+                return game.i18n.localize("YZ.ARMOR_BODY");
             case "shield":
-                return game.i18n.localize("MYZ.ARMOR_SHIELD");
+                return game.i18n.localize("YZ.ARMOR_SHIELD");
         }
     });
 
@@ -229,14 +214,14 @@ Hooks.once("init", async function () {
     });
 
     Handlebars.registerHelper("getAbilitiesTypeName", function (val) {
-        if(val=="mutant"){
-            return "MYZ.MUTATIONS"
+        if(val=="character"){
+            return "YZ.MUTATIONS"
         }else if(val=="animal"){
-            return "MYZ.ANIMAL_POWERS"
+            return "YZ.ANIMAL_POWERS"
         }else if(val=="robot"){
-            return "MYZ.MODULES"
+            return "YZ.MODULES"
         }else if(val=="human"){
-            return "MYZ.CONTACTS"
+            return "YZ.CONTACTS"
         }else{ return ""}
     });
 });
@@ -252,7 +237,7 @@ Hooks.once("ready", async function () {
     if (needMigration && game.user.isGM) {
         if (currentVersion && currentVersion < COMPATIBLE_MIGRATION_VERSION) {
             ui.notifications.error(
-                `Your MYZ system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur.`,
+                `Your YZ system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur.`,
                 { permanent: true }
             );
         }
@@ -260,18 +245,18 @@ Hooks.once("ready", async function () {
         // CALL migrations.migrateWorld(); in future if you need migration and delete two lines bellow since they are contained in the migrations.migrateWorld();     
         //migrations.migrateWorld();
         game.settings.set("yearzero", "systemMigrationVersion", game.system.data.version);
-        ui.notifications.info(`MYZ System Migration to version ${game.system.data.version} completed!`, { permanent: true });
+        ui.notifications.info(`YZ System Migration to version ${game.system.data.version} completed!`, { permanent: true });
     }
     // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-    //Hooks.on("hotbarDrop", (bar, data, slot) => createMYZMacro(data, slot));
+    //Hooks.on("hotbarDrop", (bar, data, slot) => createYZMacro(data, slot));
 });
 
 /* SET CHARACTER TYPE */
 /* POPULATE CHARACTER WITH DEFAULT SKILLS */
-Hooks.on("createActor", async (actor, options, userId) => MYZHooks.onCreateActor(actor, options, userId));
-//Hooks.on("preCreateItem", (item, updateData, options) => { MYZHooks.onPreCreateItem(item, updateData, options); });
-Hooks.on("preCreateItem", MYZHooks.onPreCreateItem);
-Hooks.on("preUpdateItem", (item, updateData, option, _id) => { MYZHooks.onUpdateOwnedItem(item, updateData, option, _id); });
+Hooks.on("createActor", async (actor, options, userId) => YZHooks.onCreateActor(actor, options, userId));
+//Hooks.on("preCreateItem", (item, updateData, options) => { YZHooks.onPreCreateItem(item, updateData, options); });
+Hooks.on("preCreateItem", YZHooks.onPreCreateItem);
+Hooks.on("preUpdateItem", (item, updateData, option, _id) => { YZHooks.onUpdateOwnedItem(item, updateData, option, _id); });
 
 /* -------------------------------------------- */
 /*  DsN Hooks                                   */
@@ -299,7 +284,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
         texture: "none",
     });
 
-    dice3d.addSystem({ id: "yearzero", name: "Mutant Year Zero" }, true);
+    dice3d.addSystem({ id: "yearzero", name: "Year Zero" }, true);
     dice3d.addDicePreset({
         type: "db",
         labels: [
@@ -352,7 +337,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
  * @param {number} slot     The hotbar slot to use
  * @returns {Promise}
  */
-async function createMYZMacro(data, slot) {
+async function createYZMacro(data, slot) {
     //ui.notifications.warn("DRAGGING ITEMS WILL BE IMPLEMENTED IN THE FUTURE");
     return;
     if (data.type !== "Item") return;

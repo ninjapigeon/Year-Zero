@@ -38,22 +38,22 @@ export class RollDialog {
         // if (typeof skillDefault !== 'object') skillDefault = { name: "Skill", value: skillDefault };
 
         let htmlData = {
-            base: { name: "MYZ.DICE_BASE", type: "base", value: baseDefault },
-            skill: { name: "MYZ.DICE_SKILL", type: "skill", value: skillDefault },
-            gear: { name: "MYZ.DICE_GEAR", type: "gear", value: gearDefault },
-            artifact: { name: "MYZ.ARTIFACTS", type: "artifact", value: artifactDefault },
-            modifier: { name: "MYZ.MODIFIER", type: "modifier", value: modifierDefault },
+            base: { name: "YZ.DICE_BASE", type: "base", value: baseDefault },
+            skill: { name: "YZ.DICE_SKILL", type: "skill", value: skillDefault },
+            gear: { name: "YZ.DICE_GEAR", type: "gear", value: gearDefault },
+            artifact: { name: "YZ.ARTIFACTS", type: "artifact", value: artifactDefault },
+            modifier: { name: "YZ.MODIFIER", type: "modifier", value: modifierDefault },
         };
 
         const htmlContent = await renderTemplate("systems/yearzero/templates/app/roll-dialog.html", htmlData);
         return new Promise((resolve) => {
             let d = new Dialog({
-                title: `${game.i18n.localize("MYZ.ROLL")} : ${game.i18n.localize(rollName)}`,
+                title: `${game.i18n.localize("YZ.ROLL")} : ${game.i18n.localize(rollName)}`,
                 content: htmlContent,
                 buttons: {
                     roll: {
                         icon: '<i class="fas fa-check"></i>',
-                        label: `${game.i18n.localize("MYZ.ROLL")}`,
+                        label: `${game.i18n.localize("YZ.ROLL")}`,
                         callback: (html) => {
                             let base = html.find("#base")[0].value;
                             let skill = html.find("#skill")[0].value;
