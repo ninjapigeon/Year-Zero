@@ -8,7 +8,7 @@
 				"rank": "",
 				"age": "",
 				"resources": {
-					"grub": {
+					"food": {
 						"value": 0
 					},
 					"water": {
@@ -17,12 +17,12 @@
 					"booze": {
 						"value": 0
 					},
-					"bullets": {
+					"ammo": {
 						"value": 0
 					}
 				},
 				"appearance": {
-					"label": "MYZ.APPEARANCE",
+					"label": "YZ.APPEARANCE",
 					"value": ""
 				},
 				"relationships": {
@@ -32,20 +32,20 @@
 					"dream": ""
 				},
 				"armorrating": {
-					"label": "MYZ.ARMOR",
+					"label": "YZ.ARMOR",
 					"value": 0
 				},
 				"rot": {
-					"label": "MYZ.ROT",
+					"label": "YZ.ROT",
 					"min": 0,
 					"value": 0
 				},
 				"xp": {
-					"label": "MYZ.EXPERIENCE",
+					"label": "YZ.EXPERIENCE",
 					"value": 0
 				},
 				"crit": {
-					"label": "MYZ.CRITICAL",
+					"label": "YZ.CRITICAL",
 					"value": ""
 				},
 				"creatureType": "",
@@ -54,25 +54,25 @@
 			"stats": {
 				"attributes": {
 					"strength": {
-						"label": "MYZ.ATTRIBUTE_STRENGTH",
+						"label": "YZ.ATTRIBUTE_STRENGTH",
 						"value": 0,
 						"min": 0,
 						"max": 0
 					},
 					"agility": {
-						"label": "MYZ.ATTRIBUTE_AGILITY",
+						"label": "YZ.ATTRIBUTE_AGILITY",
 						"value": 0,
 						"min": 0,
 						"max": 0
 					},
 					"wits": {
-						"label": "MYZ.ATTRIBUTE_WITS",
+						"label": "YZ.ATTRIBUTE_WITS",
 						"value": 0,
 						"min": 0,
 						"max": 0
 					},
 					"empathy": {
-						"label": "MYZ.ATTRIBUTE_EMPATHY",
+						"label": "YZ.ATTRIBUTE_EMPATHY",
 						"value": 0,
 						"min": 0,
 						"max": 0
@@ -82,19 +82,19 @@
 			"status": {
 				"conditions": {
 					"starving": {
-						"label": "MYZ.CONDITION_STARVING",
+						"label": "YZ.CONDITION_STARVING",
 						"value": false
 					},
 					"dehydrated": {
-						"label": "MYZ.CONDITION_DEHYDRATED",
+						"label": "YZ.CONDITION_DEHYDRATED",
 						"value": false
 					},
 					"sleepless": {
-						"label": "MYZ.CONDITION_SLEEPLESS",
+						"label": "YZ.CONDITION_EXHAUSTED",
 						"value": false
 					},
 					"hypothermic": {
-						"label": "MYZ.CONDITION_HYPOTHERMIC",
+						"label": "YZ.CONDITION_FREEZING",
 						"value": false
 					}
 				}
@@ -103,9 +103,9 @@
 		"character": {
 			"templates": ["base", "stats", "status"],
 			"description": "<table style=\"width: 100%; height: 90px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 17px;\">\n<th style=\"width: 395px; height: 17px; text-align: left; vertical-align: middle; background-color: #12807c;\"><span style=\"background-color: #12807c; color: #ecf0f1;\">RELATIONSHIPS</span></th>\n<th style=\"width: 136px; height: 17px; text-align: left; vertical-align: middle; background-color: #12807c;\"><span style=\"background-color: #12807c; color: #ecf0f1;\">BUDDY</span></th>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 395px; height: 17px;\">PC</td>\n<td style=\"width: 136px; height: 17px; background-color: #2dc26b;\"><span style=\"color: #000000;\">-</span></td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 395px; height: 17px;\">PC</td>\n<td style=\"width: 136px; height: 17px;\">-</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 395px; height: 17px;\">PC</td>\n<td style=\"width: 136px; height: 17px;\">-</td>\n</tr>\n<tr style=\"height: 22px;\">\n<td style=\"width: 395px; height: 22px;\">PC</td>\n<td style=\"width: 136px; height: 22px;\">-</td>\n</tr>\n</tbody>\n</table>\n<table style=\"height: 51px; width: 100%;\" border=\"1\">\n<tbody>\n<tr style=\"height: 17px;\">\n<td style=\"width: 534px; height: 17px; background-color: #ecf0f1;\"><strong>Dark Secret:</strong></td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 534px; height: 17px; background-color: #ecf0f1;\"><strong>Pride:</strong></td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 534px; height: 17px; background-color: #ecf0f1;\"><strong>Goal:</strong></td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>",
-			"coreSkills": ["ENDURE", "MIGHT", "FIGHT", "CRAFT", "SNEAK", "MOVE", "SHOOT", "SLEIGHT", "SCOUT", "LORE", "SURVIVAL", "INSIGHT", "PERFORM", "MANIPULATE", "HEAL", "NATURE"],
+			"coreSkills": ["ENDURE", "FIGHT", "CRAFT", "SNEAK", "MOVE", "SHOOT", "SCOUT", "COMPREHEND", "SURVIVE", "SENSE EMOTION", "MANIPULATE", "HEAL"],
 			"resource_points": {
-				"label": "MYZ.MUTATION_POINTS",
+				"label": "YZ.MUTATION_POINTS",
 				"value": 0,
 				"max": 10
 			}
@@ -114,7 +114,7 @@
 			"templates": ["base", "stats"],
 			"description": "",
 			"resource_points": {
-				"label": "MYZ.RESOURCE_POINTS",
+				"label": "YZ.RESOURCE_POINTS",
 				"value": 0,
 				"max": 10
 			},
