@@ -1,8 +1,8 @@
 {
-  "id": "yearzero",
+  "name": "yearzero",
   "title": "Year Zero System (Anka)",
   "description": "The open source Year Zero system for FoundryVTT, modified from @HappySteve's awesome M:YZ system, and homebrewed for my own Anka world.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "compatibility": {
     "minimum": "9",
     "verified": "9",

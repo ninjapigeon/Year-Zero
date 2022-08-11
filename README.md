@@ -5,7 +5,7 @@ The Open Source Year Zero system for FoundryVTT. Homebrewed specifically for my 
 ## Character Types:
 
 **Character**, default character type (includes race and role options)
-**NPC** -> a shorter version of a mutant/animal/robot/human \
+**NPC** -> a shorter version of a CHARACTER/animal/robot/human \
 **ARK**
 
 ## Abilities:
