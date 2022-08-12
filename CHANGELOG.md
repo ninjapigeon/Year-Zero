@@ -1,5 +1,5 @@
 # CHANGELOG
-v1.0.5 - apparently "id" is not recognized pre v10 Foundry.
+v1.0.5 - apparently "id" is not recognized pre v10 Foundry. Also more typo corrections.
 
 v1.0.4 - deeper dive into variable and characrer rnaming.
 

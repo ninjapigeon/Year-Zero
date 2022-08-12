@@ -49,7 +49,7 @@
   "initiative": "1d10",
   "gridDistance": 1,
   "gridUnits": "m",
-  "primaryTokenAttribute": "resources.health",
+  "primaryTokenAttribute": "resources.strength",
   "secondaryTokenAttribute": "",
   "url": "https://github.com/ninjapigeon/yearzero/",
   "manifest": "",
